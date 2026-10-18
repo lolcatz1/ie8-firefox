@@ -1,0 +1,30 @@
+/* win7 aero scrollbars (agent sheet, all pages + chrome), pieces from the reference screenshot */
+scrollbar slider, scrollbar thumb, scrollbar scrollbarbutton, scrollcorner {
+  appearance: auto !important;
+  -moz-default-appearance: none !important;
+  border: 0 !important; border-radius: 0 !important; box-shadow: none !important; margin: 0 !important; padding: 0 !important;
+}
+
+/* track */
+scrollbar[vertical] slider { background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAABCAIAAAC32dI2AAAAKklEQVR4nE3IsQ0AIAwDQd6KvP+OWcKdqZC48tjdmbEt6TxAW+AfIIntC+jfCNK7+LO9AAAAAElFTkSuQmCC") repeat-y !important; }
+scrollbar:not([vertical]) slider { background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAARCAIAAACToVFFAAAALUlEQVR4nGN4/PgxEwsLCxMbGxsTCDAwMMAxIyMj0////8E0ujgI//jxA6QPADSnCPGnrKiVAAAAAElFTkSuQmCC") repeat-x !important; }
+scrollcorner { background: #efefef !important; }
+
+/* arrows */
+scrollbar scrollbarbutton { width: 17px !important; height: 17px !important; min-width: 17px !important; min-height: 17px !important; background-repeat: no-repeat !important; }
+scrollbar[vertical] scrollbarbutton[type="decrement"] { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAIAAAC0D9CtAAAAqklEQVR4nN2SMQ6DMAxFsR1ZYcwVMiAhWNiyZeEgmXIfzsghYCChaqqiSKGl3aq+0faTZevDPM9CCGZGxOoJAOz7DgB5BQDWdb1PVt+Df+aI0yoRIWKMMYTw0R5KgjEGEYno2qFE27ZSSu/9qYal0Pd913XjOA7DME1TqUGeA2Z2zmmtm6ZRStV1LaVclsVau23bkQPIncee8oCYOByR90LiVd7e/e2SX3ZuUrk5bCOEKNUAAAAASUVORK5CYII=") !important; }
+scrollbar[vertical] scrollbarbutton[type="increment"] { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAIAAAC0D9CtAAAAz0lEQVR4nN2Suw2EMAxAcWxFiBpRZAAQiIKKhmVo2YJRWIZJMgOfJscp5A5ZgRTX3qsS28+KI4PWmoiklEKI6AsAHMcBADwCAPu+28rod8SfOcQveHIvep0Ena7rlmVx5zRNq6rK83wYhqBjjJnnue/7JEmUUnVdK6XatuWCP485maYpy7KmaYqicIIxxneA4Z4+jiMilmV5F2y91jqOYyLiu4OIQgguuI7btkkp7Tyugm/X9VFXkGet4wmPO8oJOl7vB+eeCAkfZ13XUPqRN+I0WMknydn6AAAAAElFTkSuQmCC") !important; }
+scrollbar:not([vertical]) scrollbarbutton[type="decrement"] { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAIAAAC0D9CtAAAAwElEQVR4nJ2SMQqEQAxFM0kYtBQLe4sB0cLS43gD7+OJvIcXsFOEiQsKsmtc2dnX/v/I8BkzjiMEwswc7Fhrgx1EDHXwISMiay0R/erQTtu2vzq0U1VVnuc6ZWOMFhCxKIqyLJ1zAHDp8LZt19OITdNkWVbXdZIkAHDpoFGIyDAMzrk0TeM4Pu68g/q53nsR6ft+XdcoinQBbzc4tK7r5nnWqZmm6VY7xxAR7/3HBnq3E9m52e3B+QYvyxLs/PGvXxoxO3Yn8sppAAAAAElFTkSuQmCC") !important; }
+scrollbar:not([vertical]) scrollbarbutton[type="increment"] { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAIAAAC0D9CtAAAA0klEQVR4nJWSMQ6DMAxFYzvKwMyUFQkJxIhYuAxH4VYciAuwgFhIK3AblSQE+qYI++PvL8M4juJPpJQyUgYAOsAvy7JIpVRcAwCIyI/PHES81dhuBv0+IlJKEdHVjzCoaduW13iqEULM89x13ZUMrWPHepIkfd8jIst+S/jyYHta67quh2HgkGxpzw3OmTBpmlZVlWVZURTGGHeOCFGWpdaaBdu2Pcogz/OmaYKCfeY0Tc4nvhQrcOLZb8ffxxxwt7NJLIOTE69Brusa1/jc3HWQN46bT5DQ+crYAAAAAElFTkSuQmCC") !important; }
+
+/* thumb: caps, gripper, body */
+scrollbar[vertical] thumb {
+  min-height: 17px !important;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAECAIAAADnFEOFAAAAi0lEQVR4nE1OQQqDQAxMQPbYLp5z9BH+/+oTiofcLItgLWjYbhLZCuLMJTPDDMFhGJh5nme4ARHdHREvJ8bYdR0RhRAaZu77vm3bM3N3ABARM3A3d1fVnPOyfMbxRUQA0KSUzsI/NvPKbRPVqrToLvu6fuPzMb2nc7e5tu2GnH+lFDWtnV2sXnr9eQBSSm+0ITmnIAAAAABJRU5ErkJggg==") top / 17px 4px no-repeat, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAECAIAAADnFEOFAAAAh0lEQVR4nGWMQQrDIBBFpxKEBkTduPVSzdZreSFpT5PGLlxYnZmS2EKgb/X5/P8uMcYQAhEhUu+dDrbt1X+8W6u1WqPvj7TcFinlBADMPA6ISMRE1Hvb54ijZGY4MVlrc85KKSEEAAsBzGKer4jEwLvgsJRSjDbfj/c+pbQ+17PpH6ONc27kD6E9Z54xaJ8jAAAAAElFTkSuQmCC") bottom / 17px 4px no-repeat,
+              url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAKCAIAAADdHiL1AAAAnUlEQVR4nGOcPn16XFzc////GRgYGRgY/v//9+/f/2/fvv/9+/ffv39///778uXL27fv+Pl5jx0/EhoSysbGxsIAA0xMTK4uzhoaGqKiohARSUlJeXl5bR19BlTAgszR1ta2trYWEBSEcHl4eHh5edE0oOj59+9fX/8ErG7DqYdp+LnN3d1dT0+Pj58fwuXk5OTi4iLgtqLiEmLcBgAx/Xm7ZtTMlQAAAABJRU5ErkJggg==") center / 17px 10px no-repeat, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAABCAIAAAC32dI2AAAAO0lEQVR4nB3BsQ3AIAwEQKVxF7EctF7LC0WwDpR2+DcSd4+ZqWpmAgRAEuBca//7QkS4eylvH1+rTUQOU5sm0vBH3q0AAAAASUVORK5CYII=") 0 0 / 17px 1px repeat-y !important;
+}
+scrollbar:not([vertical]) thumb {
+  min-width: 17px !important;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAARCAIAAAB1iJoBAAAAmUlEQVR4nD2PQQrDMAwEJWNybI3fkEfk/9c8oeTgW5oQSFOIjeuVip1SXcRo2V3E4ziGENZ1JSIbQhiGwXuvqmbbNu89tTHXUlURsRcAIiJVqecqNKjcyDJzSuk8U84f06wEoJRimFlVIALBLwAFKKjRAGKKMaYKOefjeAvEOuf2/eXuNwC27/tpeszPmYh4WZart77Qdd0fvoI3ce2hXwqiAAAAAElFTkSuQmCC") left / 4px 17px no-repeat, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAARCAIAAAB1iJoBAAAAkklEQVR4nD2NQQqDMBBFvyEIFcRk49Zje6HQ3kWw2kUW1vkzJantW83jwZ9mnmcAMcZpmpqcs5nt+55S8qpKat/363P1pIqIcw6AFxGSgAFwWjAr9yWX+W17iZxddytFKqT+hLQ6UNZExLQU/z5Pkqq1HMdhZvotMQwAcs5hCP7+SADCEMZxbJZlKc8rvm3bv3wADSBuQG7BDEMAAAAASUVORK5CYII=") right / 4px 17px no-repeat,
+              url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAARCAIAAABrQaqyAAAAs0lEQVR4nH3QMQ6CQBCF4bcTQoCwrhYUVLRUXIBSvY56DrXnQkYPQOIhSLADaXbGGLoVd6pv82eTyaimafB/1DAMnhyIiC8DiogAMPMCAOx329Px4OB6OQMgES7Lsq5rB1VViTAxS5Zl683GwcoYZqFxfM9bLIKstfNjEcTMeZ6naeogjuPv5tZyURRaawdJkljLqm2fURQBmKbpF0Hfv3xXM0b78v1x82TVdZ3vdxiGnvwBQnV5cAjjHyQAAAAASUVORK5CYII=") center / 10px 17px no-repeat, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAARCAIAAACToVFFAAAAQ0lEQVR4nBXFuw3AMAgFQPQKd5HHZ6Eo2YUqLijAfCIXpyNmJlVFdyOzkJmoOhe+tRA7EHEk3B1mhjkvPO9NIoIxxg8mmCpyVDi1GgAAAABJRU5ErkJggg==") 0 0 / 1px 17px repeat-x !important;
+}

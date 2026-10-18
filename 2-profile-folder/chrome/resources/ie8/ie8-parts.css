@@ -1,0 +1,13 @@
+/* tab strip shadow parts, loaded as an author sheet */
+#tabbrowser-arrowscrollbox::part(scrollbox) { padding: 0 !important; margin: 0 !important; }
+#tabbrowser-arrowscrollbox::part(scrollbox-clip) { contain: none !important; }
+#tabbrowser-arrowscrollbox::part(scrollbox), #tabbrowser-arrowscrollbox { scroll-behavior: auto !important; }
+#tabbrowser-arrowscrollbox::part(scrollbutton-up), #tabbrowser-arrowscrollbox::part(scrollbutton-down) { appearance: none !important; width: 17px !important; min-width: 17px !important; height: 25px !important; margin: 5px 0 0 !important; padding: 0 !important;
+  border: 1px solid transparent !important; border-radius: 3px !important; background: url("img/scroll-left.png") center no-repeat !important; list-style-image: none !important; opacity: 1 !important; }
+#tabbrowser-arrowscrollbox::part(scrollbutton-down) { background-image: url("img/scroll-right.png") !important; }
+#tabbrowser-arrowscrollbox[scrolledtostart]::part(scrollbutton-up) { background-image: url("img/scroll-left-disabled.png") !important; }
+#tabbrowser-arrowscrollbox[scrolledtoend]::part(scrollbutton-down) { background-image: url("img/scroll-right-disabled.png") !important; }
+#tabbrowser-arrowscrollbox:not([scrolledtostart])::part(scrollbutton-up):hover, #tabbrowser-arrowscrollbox:not([scrolledtoend])::part(scrollbutton-down):hover { border-image: url("img/btn-hot.png") 3 fill / 3px stretch !important; background-color: transparent !important; }
+#tabbrowser-arrowscrollbox::part(overflow-start-indicator), #tabbrowser-arrowscrollbox::part(overflow-end-indicator) { display: none !important; }
+#tabbrowser-tabs[overflow] #tabbrowser-arrowscrollbox::part(scrollbutton-down) { margin-inline-start: 29px !important; }
+#tabbrowser-arrowscrollbox { scroll-behavior: auto !important; }
