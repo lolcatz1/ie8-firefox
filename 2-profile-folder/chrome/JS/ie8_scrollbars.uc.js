@@ -15,13 +15,10 @@
     });
   } catch (e) { if (!/already/i.test(String(e))) console.error("ie8_scrollbars", e); }
   // browser ui via the sheet service, pages via the actor; data: uri so content processes need no chrome:// access
-  const sheets = [["ie8-scrollbars-uri", "chrome://userchrome/content/ie8/ie8-scrollbars.css"], ["ie8-forms-uri", "chrome://userchrome/content/ie8/ie8-forms.css"]];
-  Promise.all(sheets.map(([key, path]) => fetch(path).then((r) => r.text()).then((css) => {
+  fetch("chrome://userchrome/content/ie8/ie8-scrollbars.css").then((r) => r.text()).then((css) => {
     const spec = "data:text/css;charset=utf-8," + encodeURIComponent(css), uri = Services.io.newURI(spec);
-    Services.ppmm.sharedData.set(key, spec);
+    Services.ppmm.sharedData.set("ie8-scrollbars-uri", spec); Services.ppmm.sharedData.flush();
     if (!sss.sheetRegistered(uri, sss.AGENT_SHEET)) sss.loadAndRegisterSheet(uri, sss.AGENT_SHEET);
-  }))).then(() => {
-    Services.ppmm.sharedData.flush();
     // tabs that loaded before this ran
     for (const b of gBrowser.browsers) { try { b.browsingContext.currentWindowGlobal.getActor("IE8Scrollbars").sendAsyncMessage("apply"); } catch (e) {} }
   }).catch((e) => console.error("ie8_scrollbars", e));

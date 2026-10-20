@@ -1,12 +1,9 @@
-// puts the win7 scrollbar + form-control sheets into every page as agent sheets
+// puts the win7 scrollbar sheet into every page as an agent sheet
 export class IE8ScrollbarsChild extends JSWindowActorChild {
   handleEvent() {
     const win = this.contentWindow; if (!win || win.ie8Scrollbars) return;
-    for (const key of ["ie8-scrollbars-uri", "ie8-forms-uri"]) {
-      const uri = Services.cpmm.sharedData.get(key); if (!uri) continue;
-      try { win.windowUtils.loadSheetUsingURIString(uri, win.windowUtils.AGENT_SHEET); } catch (e) {}
-    }
-    win.ie8Scrollbars = true;
+    const uri = Services.cpmm.sharedData.get("ie8-scrollbars-uri"); if (!uri) return;
+    try { win.windowUtils.loadSheetUsingURIString(uri, win.windowUtils.AGENT_SHEET); win.ie8Scrollbars = true; } catch (e) {}
   }
   receiveMessage() { this.handleEvent(); }
 }
